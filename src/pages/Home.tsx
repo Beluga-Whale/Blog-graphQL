@@ -30,7 +30,8 @@ const Home = () => {
                 post.content.html
                     .replace(/<[^>]+>/g, '')
                     .toLowerCase()
-                    .includes(query) || post.title.toLowerCase().includes(query)
+                    .includes(query.toLowerCase()) ||
+                post.title.toLowerCase().includes(query.toLowerCase())
         );
     };
 
